@@ -92,7 +92,7 @@ function requireSSL() {
  * @return bool
  */
 function isLocalhost() {
-    if($_SERVER['SERVER_ADDR'] == '127.0.0.1') {
+    if($_SERVER['SERVER_ADDR'] == '127.0.0.1' || $_SERVER['SERVER_ADDR'] == '::1') {
         return true;
     } else {
         return false;

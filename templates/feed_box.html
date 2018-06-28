@@ -2,7 +2,7 @@
     <div class="col-md-8 col-md-offset-2">
         <div class="box box-success">
             <div class="box-header with-border">
-                <h5 class="box-title"><strong>[[FROM]]</strong> -> <strong>[[TO]]</strong></h5>
+                <h5 class="box-title"><strong>[[FROM]]</strong>></h5>
 
             </div>
             <div class="box-body">
@@ -10,7 +10,12 @@
                     <div class="box-tools pull-right">
                         <!-- Buttons, labels, and many other things can be placed here! -->
                         <!-- Here is a label for example -->
-                        <span class="label label-[[ACTION_CSS]] pointer" onclick="[[ACTION_CLICK]]">[[ACTION]]</span>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="box-title">
+                        [[TITLE]]
                     </div>
                     <div class="box-body">
                         [[CONTENT]]
@@ -22,7 +27,7 @@
             <div class="box-footer">
                 <div class="row">
                     <div class="col-xs-2">
-                            <img src="assets/img/noun_1576347_cc.png" class="img-circle img-bordered-sm pointer" width="30px" alt="Dab" style="transition: all 0.8s;" id="trigger-[[POST_ID]]" onclick="likePost('[[POST_ID]]');">
+                        <i class="fa fa-heart" style="transition: all 0.8s;" id="trigger-[[POST_ID]]" onclick="likePost('[[POST_ID]]');"></i>
                     </div>
                     <div class="col-xs-1 ">
                         <div id="likes-[[POST_ID]]">[[LIKES]]</div>

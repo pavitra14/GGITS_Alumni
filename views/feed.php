@@ -15,7 +15,7 @@ $fname = $arr_details['fname'];
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>FarewellDab | Feed</title>
+    <title><?=SITE_TITLE?></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -31,24 +31,6 @@ $fname = $arr_details['fname'];
     <link rel="stylesheet" href="<?php echo LTE;?>dist/css/skins/skin-black.css">
     <!-- Custom CSS sheet app.css -->
     <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -76,7 +58,7 @@ $fname = $arr_details['fname'];
         <nav class="navbar navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="index.html" class="navbar-brand"><b>Farewell</b>Dab</a>
+                    <a href="index.html" class="navbar-brand"><b>GGITS</b> Alumni</a>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                         <i class="fa fa-bars"></i>
                     </button>
@@ -109,29 +91,7 @@ $fname = $arr_details['fname'];
                 <div class="navbar-custom-menu">
 
                     <ul class="nav navbar-nav">
-                        <!-- Notifications Menu -->
-                        <li class="dropdown notifications-menu">
-                            <!-- Menu toggle button -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-bell-o"></i>
-                                <span class="label label-warning">10</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="header">You have [[X]] notifications</li>
-                                <li>
-                                    <!-- Inner Menu: contains the notifications -->
-                                    <ul class="menu">
-                                        <li><!-- start notification -->
-                                            <a href="#">
-                                                <i class="fa fa-users text-aqua"></i> This feature will be available soon.
-                                            </a>
-                                        </li>
-                                        <!-- end notification -->
-                                    </ul>
-                                </li>
-                                <li class="footer"><a href="#">View all</a></li>
-                            </ul>
-                        </li>
+
                         <!-- User Account Menu -->
                         <li class="dropdown user user-menu">
                             <!-- Menu Toggle Button -->
@@ -152,16 +112,7 @@ $fname = $arr_details['fname'];
                                         <small>User id - #<?=$arr_details['u_id']?></small>
                                     </p>
                                 </li>
-                                <!-- Menu Body -->
-                                <li class="user-body">
-                                    <div class="row">
-                                        <div class="col-xs-12 text-center">
-                                            <p>Your write up link - </p>
-                                            <a href="<?=SITE_URL?>?w=<?=$arr_details['username']?>" target="_blank"><?=SITE_URL?>?w=<?=$arr_details['username']?></a>
-                                        </div>
-                                    </div>
-                                    <!-- /.row -->
-                                </li>
+
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="row">
@@ -180,7 +131,7 @@ $fname = $arr_details['fname'];
                 </div>
                 <!-- /.navbar-custom-menu -->
             </div>
-            <!-- /.container-fluid -->
+            <!-- /.container -->
         </nav>
     </header>
     <!-- Full Width Column -->
@@ -189,7 +140,7 @@ $fname = $arr_details['fname'];
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Dab Board
+                    Annoucement Board
                     <small>Feed</small>
                 </h1>
             </section>
@@ -203,9 +154,7 @@ $fname = $arr_details['fname'];
                                 <i class="fa fa-times"></i></button>
                         </div>
                         <div class="box-body">
-                            This platform is still in beta stage and will be having bugs, please bear with us and report the bugs, we'll fix them ASAP.
-                            <br>
-                            And please don't misuse the platform, we don't wanna ban you :(
+                            This platform is still in beta stage and 
                         </div>
                     </div>
                 </div>
@@ -215,6 +164,7 @@ $fname = $arr_details['fname'];
                     ?>
                 </div>
                 <div class="row">
+
                     <div class="col-md-8 col-md-offset-2">
                         <div id="scroll-end">No new posts!</div>
                     </div>
@@ -233,9 +183,9 @@ $fname = $arr_details['fname'];
     <footer class="main-footer feed-footer">
         <div class="container">
             <div class="pull-right hidden-xs">
-                <b>Version</b> 0.1.0
+                <b>Version</b> <?=SITE_VERSION?>
             </div>
-            <strong>Copyright &copy; Made with &hearts; by <a href="https://pbehre.in">Pavitra</a>, Ritwik and Sakshi </strong>
+            <strong><?=SITE_FOOTER?></strong>
         </div>
         <!-- /.container -->
     </footer>
