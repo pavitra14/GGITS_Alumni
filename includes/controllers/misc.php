@@ -123,3 +123,25 @@ function ifAdmin() {
         return $btn;
     }
 }
+
+/**
+ * @param bool $flag
+ */
+function ifAdmin2($flag = false) {
+    if($_SESSION['admin'] == true) {
+        //User is admin, do nothing.
+    } else {
+        if($flag == true) {
+            echo "<script async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>
+                    <ins class=\"adsbygoogle\"
+                         style=\"display:block\"
+                         data-ad-format=\"fluid\"
+                         data-ad-layout-key=\"-fb+5w+4e-db+86\"
+                         data-ad-client=\"ca-pub-6753116435190733\"
+                         data-ad-slot=\"6244265373\"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>";
+        }
+    }
+}

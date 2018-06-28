@@ -147,7 +147,11 @@ $fname = $arr_details['fname'];
 
             <!-- Main content -->
             <section class="content">
-
+                <div class="row">
+                    <div class="col-md-12">
+                        <? ifAdmin2(true); ?>
+                    </div>
+                </div>
                 <div id="feedContent">
                     <?php
                     include 'includes/feedContent.php';

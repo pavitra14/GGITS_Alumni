@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06e4681f-a919-4505-87ec-ac47f772203f" name="Default" comment="Added Administration Board">
-      <change beforePath="$PROJECT_DIR$/.idea/Farewell-dab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Farewell-dab.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="06e4681f-a919-4505-87ec-ac47f772203f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/logo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/noun_1576347_cc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/like.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/like.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/controllers/misc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/controllers/misc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/feed_box.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/feed_box.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/feed.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/feed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/view.php" afterDir="false" />
     </list>
     <ignored path="assets/js/vendor/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,7 +45,29 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="feed.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/feed.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="151" column="40" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="misc.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/controllers/misc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="139" column="67" selection-start-line="139" selection-start-column="67" selection-end-line="139" selection-end-column="67" />
+              <folding>
+                <element signature="n#style#0;n#ins#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -113,7 +126,6 @@
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/includes/controllers/feed.php" />
         <option value="$PROJECT_DIR$/register.php" />
-        <option value="$PROJECT_DIR$/views/feed.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -123,8 +135,6 @@
         <option value="$PROJECT_DIR$/assets/js/app.js" />
         <option value="$PROJECT_DIR$/includes/controllers/users.php" />
         <option value="$PROJECT_DIR$/includes/functions.php" />
-        <option value="$PROJECT_DIR$/views/feed.php" />
-        <option value="$PROJECT_DIR$/includes/controllers/misc.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/templates/feed_box.html" />
@@ -136,6 +146,9 @@
         <option value="$PROJECT_DIR$/views/admin.view.php" />
         <option value="$PROJECT_DIR$/views/view.php" />
         <option value="$PROJECT_DIR$/assets/js/tables.js" />
+        <option value="$PROJECT_DIR$/views/feed.php" />
+        <option value="$PROJECT_DIR$/views/feed.php" />
+        <option value="$PROJECT_DIR$/includes/controllers/misc.php" />
       </list>
     </option>
   </component>
@@ -215,6 +228,12 @@
               <item name="GGITS_Alumni" type="b2602c69:ProjectViewProjectNode" />
               <item name="GGITS_Alumni" type="462c0819:PsiDirectoryNode" />
               <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GGITS_Alumni" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GGITS_Alumni" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GGITS_Alumni" type="b2602c69:ProjectViewProjectNode" />
@@ -333,14 +352,7 @@
       <workItem from="1530094502617" duration="12551000" />
       <workItem from="1530178819451" duration="1089000" />
       <workItem from="1530183362971" duration="9980000" />
-      <workItem from="1530199837966" duration="18815000" />
-    </task>
-    <task id="LOCAL-00011" summary="Fixed template path issue.">
-      <created>1523303986222</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1523303986222</updated>
+      <workItem from="1530199837966" duration="19371000" />
     </task>
     <task id="LOCAL-00012" summary="send mails on user registration and new posts.">
       <created>1523304524887</created>
@@ -678,11 +690,18 @@
       <option name="project" value="LOCAL" />
       <updated>1530202558775</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Added Administration Board">
+      <created>1530219842201</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1530219842201</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127570000" />
+    <option name="totallyTimeSpent" value="128126000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -695,6 +714,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5002704" side_tool="true" weight="0.32912722" />
@@ -760,7 +780,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Small bug" />
     <MESSAGE value="trim() added to search query" />
     <MESSAGE value="Force SSL on remote server" />
     <MESSAGE value="Added a delete option on profile page&#10;and a TODO Report option on other feeds" />
@@ -785,7 +804,8 @@
     <MESSAGE value="Autofeed load patch" />
     <MESSAGE value="Initial Commit based on FarewellDab" />
     <MESSAGE value="Added Profile page and Timeline." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Profile page and Timeline." />
+    <MESSAGE value="Added Administration Board" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Administration Board" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -953,24 +973,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/feed.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="48" selection-start-line="48" selection-end-line="49" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/feed_box.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/controllers/misc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="121" column="38" selection-start-line="121" selection-start-column="38" selection-end-line="121" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1070,13 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/controllers/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1092,6 +1091,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="179" column="17" selection-start-line="179" selection-end-line="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/controllers/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/feed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="151" column="40" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/controllers/misc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="139" column="67" selection-start-line="139" selection-start-column="67" selection-end-line="139" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#ins#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
