@@ -49,7 +49,7 @@ function deletePost(p_id){
             type: "POST",
             success: function(data){
                 alert("Post deleted.");
-                location.reload();
+                location.href = "index.html?admin=1";
             }
         });
     }

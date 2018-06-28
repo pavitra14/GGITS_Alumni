@@ -25,6 +25,16 @@ if($_POST['profileUpdateBtn'] == 'Update') {
         //event post successfull
         echo '<script>alert("Event added"); location.href = "index.html?profile=1"; </script>';
     }
+} elseif ($_POST['announceBtn'] == 1){
+    $post = $_POST;
+    $arr_details = $_SESSION['arr_details'];
+    $status = msgPost($post, $arr_details['fname'] . ' ' . $arr_details['lname']);
+    if($status == true) {
+        //Post successfull!
+        echo '<script>alert("Announced");</script>';
+    } else {
+        exit(json_encode($post));
+    }
 }
 //if-elseif statements to handle custom views.
 //these are to be at the last.
@@ -32,6 +42,8 @@ if(!empty($_GET['profile'])){
     require_once 'views/profile.php';
 }elseif (isset($_GET['view']) && $_GET['view'] != null) {
     require_once 'views/view.php';
-}elseif ($_SESSION['authorized'] == true) {
+}elseif (!empty($_GET['admin'])) {
+    require_once 'views/admin.view.php';
+}elseif($_SESSION['authorized'] == true) {
     require_once 'views/feed.php';
 }

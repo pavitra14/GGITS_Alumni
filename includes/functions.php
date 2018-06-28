@@ -54,3 +54,7 @@ require_once 'controllers/feed.php';
  * handle user cookies and roles
  */
 require_once 'controllers/users.php';
+/*
+ * handle admin functions
+ */
+require_once 'controllers/admin.php';

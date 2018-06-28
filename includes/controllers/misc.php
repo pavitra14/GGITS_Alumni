@@ -119,7 +119,7 @@ function escape($data) {
 
 function ifAdmin() {
     if($_SESSION['admin'] == true) {
-        $btn = '<li><a href="?admin=1" onclick="alert(\'Soon.\')">Admin</a></li>';
+        $btn = '<li><a href="?admin=1">Admin</a></li>';
         return $btn;
     }
 }

@@ -147,17 +147,7 @@ $fname = $arr_details['fname'];
 
             <!-- Main content -->
             <section class="content">
-                <div class="row">
-                    <div class="box box-primary">
-                        <div class="pull-right box-tools">
-                            <button type="button" class="btn btn-info btn-flat" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
-                                <i class="fa fa-times"></i></button>
-                        </div>
-                        <div class="box-body">
-                            This platform is still in beta stage and 
-                        </div>
-                    </div>
-                </div>
+
                 <div id="feedContent">
                     <?php
                     include 'includes/feedContent.php';
