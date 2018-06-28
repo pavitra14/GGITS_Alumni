@@ -15,6 +15,8 @@ if(!empty($_GET['like'])) {
     getURLFromName('ajax');
 }elseif(!empty($_GET['delete'])){
     deletePost();
+}elseif(!empty($_GET['deleteEvent'])){
+    delEvent();
 } else {
     getFeed();
 }

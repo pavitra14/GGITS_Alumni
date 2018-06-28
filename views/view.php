@@ -5,8 +5,11 @@
  * Date: 7/4/18
  * Time: 10:48 PM
  */
-
-
+$view = $_GET['view'];
+$v_details = getFromView($view);
+$v_gravurl = gravatar($v_details['email']);
+$v_fullname = $v_details['fname'] . ' ' . $v_details['lname'];
+$v_fname = $v_details['fname'];
 if(!logged_in()) {
     $_SESSION['error'] = "You need to login first.";
     $_SESSION['redirect'] = $w;
@@ -157,19 +160,19 @@ $fname = $arr_details['fname'];
                         <div class="box-body box-profile">
                             <img class="profile-user-img img-responsive img-circle" src="<?=$gravurl?>" alt="User profile picture">
 
-                            <h3 class="profile-username text-center"><?=$fullname?></h3>
+                            <h3 class="profile-username text-center"><?=$v_fullname?></h3>
 
-                            <p class="text-muted text-center">Session: <?=$arr_details['session']?></p>
+                            <p class="text-muted text-center">Session: <?=$v_details['session']?></p>
 
                             <ul class="list-group list-group-unbordered">
                                 <li class="list-group-item">
-                                    <b>Email</b> <a class="pull-right" href="mailto:<?=$arr_details['email']?>"><?=$arr_details['email']?></a>
+                                    <b>Email</b> <a class="pull-right" href="mailto:<?=$v_details['email']?>"><?=$v_details['email']?></a>
                                 </li>
                                 <li class="list-group-item">
-                                    <b>Phone</b> <a href="tel:<?=$arr_details['curr_phn']?>" class="pull-right"><?=$arr_details['curr_phn']?></a>
+                                    <b>Phone</b> <a href="tel:<?=$v_details['curr_phn']?>" class="pull-right"><?=$v_details['curr_phn']?></a>
                                 </li>
                             </ul>
-                            <a href="mailto:<?=$arr_details['email']?>" class="btn btn-primary btn-block"><b>Ping!</b></a>
+                            <a href="mailto:<?=$v_details['email']?>" class="btn btn-primary btn-block"><b>Ping!</b></a>
                         </div>
                         <!-- /.box-body -->
                     </div>
@@ -184,20 +187,20 @@ $fname = $arr_details['fname'];
                             <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
 
                             <p class="text-muted">
-                                <?=$arr_details['course']?> in <?=$arr_details['branch']?> from <?=$arr_details['college']?>
+                                <?=$v_details['course']?> in <?=$v_details['branch']?> from <?=$v_details['college']?>
                             </p>
 
                             <hr>
 
                             <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
 
-                            <p class="text-muted"><?=$arr_details['curr_loc']?></p>
+                            <p class="text-muted"><?=$v_details['curr_loc']?></p>
 
                             <hr>
 
                             <strong><i class="fa fa-user-md margin-r-5"></i> Job</strong>
 
-                            <p><?=$arr_details['curr_pos']?></p>
+                            <p><?=$v_details['curr_pos']?></p>
                         </div>
                         <!-- /.box-body -->
                     </div>
@@ -213,81 +216,56 @@ $fname = $arr_details['fname'];
                         <div class="tab-content">
                             <div class="tab-pane" id="profile">
                                 <form class="form-horizontal" method="post">
-                                    <input type="hidden" name="u_id" value="<?=$arr_details['u_id']?>">
+                                    <input type="hidden" name="u_id" value="<?=$v_details['u_id']?>">
                                     <div class="form-group">
                                         <label for="inputName" class="col-sm-2 control-label">Current Company</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="inputName" name="curr_com" placeholder="Company" value="<?=$arr_details['curr_com']?>">
+                                            <input type="text" class="form-control" id="inputName" name="curr_com" placeholder="Company" value="<?=$v_details['curr_com']?>" disabled>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 
                                         <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" value="<?=$arr_details['email']?>">
+                                            <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" value="<?=$v_details['email']?>" disabled>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputName" class="col-sm-2 control-label">Current Position</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="inputName" name="curr_pos" placeholder="Current Position" value="<?=$arr_details['curr_pos']?>">
+                                            <input type="text" class="form-control" id="inputName" name="curr_pos" placeholder="Current Position" value="<?=$v_details['curr_pos']?>" disabled>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputExperience" class="col-sm-2 control-label">Current Location</label>
 
                                         <div class="col-sm-10">
-                                            <textarea class="form-control" id="inputExperience" name="curr_loc" placeholder="Current Location" ><?=$arr_details['curr_loc']?></textarea>
+                                            <textarea class="form-control" id="inputExperience" name="curr_loc" placeholder="Current Location" disabled><?=$v_details['curr_loc']?></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputSkills" class="col-sm-2 control-label">Phone.</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="inputSkills" name="curr_phn" placeholder="Phone" value="<?=$arr_details['curr_phn']?>">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputpwd" class="col-sm-2 control-label">Password</label>
-
-                                        <div class="col-sm-10">
-                                            <input type="password" class="form-control" id="inputpwd" name="password" placeholder="Password">
+                                            <input type="text" class="form-control" id="inputSkills" name="curr_phn" placeholder="Phone" value="<?=$v_details['curr_phn']?>" disabled>
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <div class="col-sm-offset-2 col-sm-10">
-                                            <input type="submit" name="profileUpdateBtn" class="btn btn-danger" value="Update">
-                                        </div>
-                                    </div>
                                 </form>
                             </div>
                             <!-- /.tab-pane -->
                             <div class="active tab-pane" id="timeline">
                                 <!-- The timeline -->
                                 <ul class="timeline timeline-inverse" id="timeline">
-                                    <? getEvents($arr_details['u_id']);?>
+                                    <? getEvents($v_details['u_id'], 'view');?>
                                     <li>
                                         <i class="fa fa-clock-o bg-gray"></i>
                                     </li>
                                 </ul>
                                 <br>
-                                <form class="form-horizontal" method="post">
-                                    <input type="hidden" name="u_id" value="<?=$arr_details['u_id']?>">
-                                    <div class="form-group">
-                                        <div class="col-sm-8 col-md-8">
-                                            <input type="text" class="form-control" id="eventName" name="eventName" placeholder="Add a new event to Timeline">
-                                        </div>
-                                        <div class="col-sm-2 col-md-2">
-                                            <input type="date" name="eventDate" class="date form-control" id="eventDate" placeholder="Date" required/>
-                                        </div>
-                                        <div class="col-sm-2 col-md-2">
-                                            <input type="submit" name="eventBtn" class="btn btn-success form-control" value="Add event"/>
-                                        </div>
-                                    </div>
-                                </form>
+
                             </div>
                             <!-- /.tab-pane -->
 
@@ -331,7 +309,6 @@ $fname = $arr_details['fname'];
 <!-- Type Ahead search -->
 <script src="./assets/js/typeahead.min.js"></script>
 <script src="./assets/js/search.js"></script>
-<script src="./assets/js/app.js"></script>
 </body>
 </html>
 

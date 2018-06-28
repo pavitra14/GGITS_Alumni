@@ -65,7 +65,7 @@ function getURLFromName($mode = 'search', $query = null){
     if(mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_array($result);
         $username = $row['username'];
-        $output = "https://farewell.pbehre.in/?w=";
+        $output = SITE_URL."?view=";
         $output .= $username;
     } else {
         $output = SITE_URL."#";

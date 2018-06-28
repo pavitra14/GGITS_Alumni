@@ -51,5 +51,6 @@ require_once 'controllers/register.php';
  */
 require_once 'controllers/feed.php';
 /*
- * handle user cookies
+ * handle user cookies and roles
  */
+require_once 'controllers/users.php';
