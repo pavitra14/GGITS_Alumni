@@ -22,9 +22,9 @@ function getFeedTemplate() {
 /**
  * To generate the feed from Database
  */
-function getFeed(){
+/*function getFeed(){
     global $conn;
-    $perPage = 10;
+    $perPage = 3;
     $page = 1;
     $sql = "SELECT * FROM posts ORDER BY date_created desc";
     if(!empty($_GET['page'])) {
@@ -66,6 +66,35 @@ function getFeed(){
         $output .= 'No new posts!';
     }
     print $output;
+}*/
+function getFeed() {
+    global $conn;
+    $limit = (intval($_GET['limit']) != 0 ) ? $_GET['limit'] : 10;
+    $offset = (intval($_GET['offset']) != 0 ) ? $_GET['offset'] : 0;
+    $sql = "SELECT * FROM posts WHERE 1 ORDER BY date_created desc LIMIT $limit OFFSET $offset";
+    $result = mysqli_query($conn, $sql);
+    $output = '';
+    if(mysqli_num_rows($result) != 0) {
+        //$r = mysqli_fetch_array($result);
+        $feedCont = getFeedTemplate();
+        //die(json_encode($r));
+        //foreach ($r as $q) {
+        while($q = mysqli_fetch_array($result)) {
+            $POST_ID = $q['p_id'];
+            $CONTENT = $q['msg'];
+            $LIKES = $q['likes'];
+            $from_user = getUserFromUID($q['from_id']);
+            $FROM = $from_user['fname'] . ' ' . $from_user['lname'];
+            $TITLE = $q['title'];
+            $post = str_replace("[[FROM]]", $FROM, $feedCont);
+            $post = str_replace("[[TITLE]]", $TITLE, $post);
+            $post = str_replace("[[CONTENT]]", $CONTENT, $post);
+            $post = str_replace("[[POST_ID]]", $POST_ID, $post);
+            $post = str_replace("[[LIKES]]", $LIKES, $post);
+            $output .= $post;
+        }
+    }
+    echo $output;
 }
 
 /**

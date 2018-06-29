@@ -127,12 +127,14 @@ function ifAdmin() {
 /**
  * @param bool $flag
  */
-function ifAdmin2($flag = false) {
+function a75719561fce4b08ad4dfdb0b1840f3($flag = false) {
     if($_SESSION['admin'] == true) {
         //User is admin, do nothing.
     } else {
         if($flag == true) {
-            echo "<script async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>
+            echo "<div class=\"row\">
+                    <div class=\"col-md-12\">
+                    <script async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>
                     <ins class=\"adsbygoogle\"
                          style=\"display:block\"
                          data-ad-format=\"fluid\"
@@ -141,7 +143,9 @@ function ifAdmin2($flag = false) {
                          data-ad-slot=\"6244265373\"></ins>
                     <script>
                          (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>";
+                    </script>
+                                        </div>
+                </div>";
         }
     }
 }

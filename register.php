@@ -110,8 +110,9 @@ if(logged_in()){
             </p>
             <form action="" method="POST">
                 <div class="form-group has-feedback">
-                    <input type="text" name="user" class="form-control" placeholder="Username" required>
+                    <input type="text" name="user" id="username" class="form-control" placeholder="Username" required>
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                    <div id="userExist"></div>
                 </div>
                 <div class="form-group has-feedback">
                     <input type="password" name="pass" class="form-control" placeholder="Password" required>
@@ -126,8 +127,9 @@ if(logged_in()){
                     <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                    <div id="emailExist"></div>
                 </div>
                 <div class="form-group has-feedback">
                     <select name="course" id="course" class="form-control" required>
@@ -144,10 +146,43 @@ if(logged_in()){
                         <option value="" disabled selected>Session</option>
                     </select>
                 </div>
-
+                <div class="form-group has-feedback">
+                    <input type="text" name="curr_pos" class="form-control" placeholder="Current Job Position(If any/NA)" required>
+                    <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="text" name="curr_com" class="form-control" placeholder="Current Company(If any/NA)" required>
+                    <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <textarea name="curr_loc" id="curr_loc" cols="30" rows="5" placeholder="Current Address/Locations" class="form-control"></textarea>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="text" name="curr_phn" class="form-control" placeholder="Current Phone no." required>
+                    <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <select name="branch" id="branch" class="form-control">
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EE">EE</option>
+                        <option value="ME">ME</option>
+                        <option value="EX">EX</option>
+                        <option value="MCA">MCA</option>
+                        <option value="Civil">Civil</option>
+                        <option value="IT">IT</option>
+                        <option value="Applied Sciences">Applied Sciences</option>
+                        <option value="MBA">MBA</option>
+                    </select>
+                </div>
+                <div class="form-group has-feedback">
+                    <select name="college" id="college" class="form-control">
+                        <option value="Gyan Ganga Institute of Technology and Sciences">Gyan Ganga Institute of Technology and Sciences</option>
+                    </select>
+                </div>
                 <div class="row">
                     <div class="col-xs-5 pull-right">
-                        <button type="submit" class="btn btn-danger btn-block btn-flat" name="submitR" value="1">Get on board!</button>
+                        <button type="submit" class="btn btn-danger btn-block btn-flat" name="submitR" value="1" id="submitR">Get on board!</button>
                     </div>
                     <!-- /.col -->
                 </div>
@@ -188,6 +223,39 @@ if(logged_in()){
                 value: sess,
                 text: sess
             }));
+        }
+    });
+    $(document).ready(function() {
+        var x_timer;
+        $("#username").keyup(function (e){
+            clearTimeout(x_timer);
+            var user_name = $(this).val();
+            x_timer = setTimeout(function(){
+                console.log("checking user");
+                check_username_ajax(user_name, "#userExist");
+            }, 1000);
+        });
+        $("#email").keyup(function (e){
+            clearTimeout(x_timer);
+            var user_name = $(this).val();
+            x_timer = setTimeout(function(){
+                console.log("checking email");
+                check_email_ajax(user_name, "#emailExist");
+            }, 1000);
+        });
+
+        function check_username_ajax(username, feedback){
+            $(feedback).html('Checking...<i class="fa fa-spinner"></i>');
+            $.post('includes/feedContent.html', {'userExist':username}, function(data) {
+                $(feedback).html(data);
+            });
+        }
+        function check_email_ajax(username, feedback){
+            $(feedback).html('Checking...<i class="fa fa-spinner"></i>');
+            $.post('includes/feedContent.html', {'emailExist':username}, function(data) {
+                $(feedback).html(data);
+                console.log(data);
+            });
         }
     });
 </script>

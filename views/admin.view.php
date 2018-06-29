@@ -177,8 +177,8 @@ $fname = $arr_details['fname'];
                                                 <form class="form-horizontal" method="post">
                                                     <input type="hidden" name="from_id" value="<?=$arr_details['u_id']?>">
                                                     <div class="box-body">
-                                                            <input type="text" name="title" class="form-control" id="title" placeholder="Title">
-                                                            <textarea name="msg" id="content" cols="30" rows="10" placeholder="Content"></textarea>
+                                                            <input type="text" name="title" class="form-control" id="title" placeholder="Title" required>
+                                                            <textarea name="msg" id="content" cols="30" rows="10" placeholder="Content" required></textarea>
                                                     </div>
                                                     <div class="box-footer">
                                                         <input type="reset" value="Reset" class="btn btn-default">

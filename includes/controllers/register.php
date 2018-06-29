@@ -19,7 +19,15 @@ function registerUser($post) {
     $temp = explode('-',$session);
     $startYear = $temp[0];
     $endYear = $temp[1];
-    $query = "INSERT INTO `user_details`(`u_id`, `username`, `password`, `fname`, `lname`, `email`, `session`, `course`, `startYear`, `endYear`) VALUES ('$u_id','$username','$password','$fname','$lname','$email', '$session', '$course', '$startYear', $endYear)";
+    $curr_pos = $post['curr_pos'];
+    $curr_com = $post['curr_com'];
+    $curr_loc = $post['curr_loc'];
+    $curr_phn = $post['curr_phn'];
+    $branch = $post['branch'];
+    $college = $post['college'];
+    $query = "INSERT INTO `user_details`
+(`u_id`, `username`, `password`, `fname`, `lname`, `email`, `session`, `course`, `startYear`, `endYear`, `curr_pos`, `curr_com`,`curr_loc`, `curr_phn`, `branch`, `college`)
+ VALUES ('$u_id','$username','$password','$fname','$lname','$email', '$session', '$course', '$startYear', '$endYear', '$curr_pos', '$curr_com', '$curr_loc', '$curr_phn', '$branch', '$college')";
     if(mysqli_query($conn, $query)) {
         //Registration Successfull
         mailNewAccount($email,$fname,$username, $u_id);
@@ -32,4 +40,34 @@ function registerUser($post) {
         $_SESSION['error'] = mysqli_error($conn);
     }
 
+}
+
+/**
+ * @param string $username
+ * @return bool
+ */
+function userExists($username){
+    global $conn;
+    $sql = "SELECT * FROM `user_details` WHERE username = '$username'";
+    $result = mysqli_query($conn, $sql);
+    if(mysqli_num_rows($result) > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/**
+ * @param $email
+ * @return bool
+ */
+function emailExists($email){
+    global $conn;
+    $sql = "SELECT * FROM `user_details` WHERE email = '$email'";
+    $result = mysqli_query($conn, $sql);
+    if(mysqli_num_rows($result) > 0) {
+        return true;
+    } else {
+        return false;
+    }
 }

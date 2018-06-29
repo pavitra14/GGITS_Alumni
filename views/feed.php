@@ -147,25 +147,13 @@ $fname = $arr_details['fname'];
 
             <!-- Main content -->
             <section class="content">
+                        <? a75719561fce4b08ad4dfdb0b1840f3(); ?>
+                <div id="feedContent">
+
+                </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <? ifAdmin2(true); ?>
-                    </div>
-                </div>
-                <div id="feedContent">
-                    <?php
-                    include 'includes/feedContent.php';
-                    ?>
-                </div>
-                <div class="row">
-
-                    <div class="col-md-8 col-md-offset-2">
-                        <div id="scroll-end">No new posts!</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div id="loader-icon"><i class="fa fa-spinner fa-spin"></i></div>
+                        <div id="loader_message"></div>
                     </div>
                 </div>
             </section>
